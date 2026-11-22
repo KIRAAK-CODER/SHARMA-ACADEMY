@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sharma Academy – Home (design mockup)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --main:#0B4A2E;      /* TEMPORARY – logo pending */
+  --accent:#1F9D55;    /* TEMPORARY – logo pending */
+  --tint:#E8F4EC;
+  --ink:#14231B;
+  --muted:#51615A;
+  --wa:#25D366;
+  --s1:8px;--s2:16px;--s3:24px;--s4:40px;--s5:64px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins','Noto Sans Telugu',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.55;font-size:16px;padding-bottom:84px}
+.te{font-family:'Noto Sans Telugu','Poppins',sans-serif;line-height:1.7}
+.wrap{max-width:1100px;margin:0 auto;padding:0 var(--s2)}
+section{padding:var(--s4) 0}
+@media(min-width:800px){section{padding:var(--s5) 0}body{padding-bottom:0}}
+h1,h2,h3{font-weight:700;line-height:1.25}
+h2{font-size:clamp(1.5rem,3.5vw,2rem);color:var(--main)}
+.sub{color:var(--muted);margin:6px 0 var(--s3)}
+.pending{background:#FFF6D6;border:1px dashed #B88A00;color:#6B5000;padding:2px 8px;border-radius:4px;font-size:.85em;font-weight:600;white-space:nowrap}
+.ribbon{background:#FFF6D6;color:#6B5000;text-align:center;font-size:13px;padding:6px var(--s2);border-bottom:1px solid #E6D28A}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 var(--s3);border-radius:8px;font:700 17px 'Poppins','Noto Sans Telugu',sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-call{background:var(--main);color:#fff}
+.btn-wa{background:var(--wa);color:#0B2A1A}
+.btn-out{border-color:var(--accent);color:var(--main);background:#fff}
+.btn-white{background:#fff;color:var(--main)}
+.btn small{font-weight:600;font-size:13px;display:block;opacity:.9}
+
+/* header */
+header{background:#fff;border-bottom:1px solid var(--tint)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);min-height:64px}
+.brand{font-weight:700;font-size:1.2rem;color:var(--main);display:flex;align-items:center;gap:10px}
+.logo{width:36px;height:36px;border:2px dashed var(--accent);border-radius:6px;font-size:8px;display:grid;place-items:center;color:var(--accent);text-align:center;line-height:1}
+nav{display:none;gap:var(--s3);font-weight:600}
+nav a{color:var(--ink);text-decoration:none}
+nav a.on{color:var(--accent);border-bottom:2px solid var(--accent)}
+.lang{font-size:14px;color:var(--muted);font-weight:600}
+.lang b{color:var(--main)}
+@media(min-width:800px){nav{display:flex}}
+
+/* results */
+.results{background:var(--main);color:#fff}
+.results h2{color:#fff}
+.results .sub{color:#BFE3CC}
+.hero-cta{display:grid;gap:var(--s1);margin-bottom:var(--s4)}
+.hero-cta .btn{min-height:60px;flex-direction:column;gap:0;white-space:nowrap}
+@media(min-width:600px){.hero-cta{grid-template-columns:repeat(2,minmax(0,260px))}}
+.tag{display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:13px;padding:4px 10px;border-radius:4px;margin-bottom:var(--s2)}
+.grid3{display:grid;gap:var(--s2);grid-template-columns:1fr}
+@media(min-width:800px){.grid3{grid-template-columns:repeat(3,1fr);gap:var(--s3)}}
+.rcard{background:#fff;color:var(--ink);border-radius:12px;overflow:hidden}
+.photo{height:200px;background:var(--tint);display:grid;place-items:center;color:var(--muted);font-size:14px;border-bottom:1px solid #D3E8DA}
+.rbody{padding:var(--s2) var(--s3) var(--s3)}
+.rank{font-size:2.4rem;font-weight:700;color:var(--accent);line-height:1.1}
+.rank small{font-size:.9rem;color:var(--muted);font-weight:600}
+.rbody h3{font-size:1.1rem;margin:6px 0 4px}
+.rbody p{color:var(--muted);font-size:15px}
+.more{margin-top:var(--s3)}
+.more a{color:#fff;font-weight:600}
+
+/* batches */
+.batches{background:#fff}
+.bcard{border:1px solid #CFE5D7;border-radius:12px;padding:var(--s3);background:#fff}
+.bcard .lvl{font-size:13px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.04em}
+.bcard h3{color:var(--main);font-size:1.3rem;margin:4px 0 var(--s2)}
+.bcard dl{display:grid;grid-template-columns:90px 1fr;gap:8px;font-size:15px;margin-bottom:var(--s3)}
+.bcard dt{color:var(--muted)}
+.bcard .btn{width:100%;min-height:48px;font-size:16px}
+.group{margin-top:var(--s4)}
+.group:first-of-type{margin-top:0}
+.group h3{font-size:1.1rem;margin-bottom:var(--s2);padding-left:12px;border-left:4px solid var(--accent)}
+
+/* faq */
+.faq{background:var(--tint)}
+details{background:#fff;border:1px solid #CFE5D7;border-radius:8px;margin-bottom:var(--s1)}
+summary{cursor:pointer;padding:var(--s2) var(--s3);font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:var(--s2);min-height:52px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;color:var(--accent);font-weight:700}
+details[open] summary::after{content:"–"}
+details p{padding:0 var(--s3) var(--s3);color:var(--muted)}
+
+/* contact block */
+.cta{background:var(--main);color:#fff;text-align:center}
+.cta h2{color:#fff}
+.cta .sub{color:#BFE3CC}
+.big{display:grid;gap:var(--s2);max-width:760px;margin:var(--s3) auto 0}
+@media(min-width:700px){.big{grid-template-columns:1fr 1fr}}
+.big .btn{min-height:84px;font-size:1.3rem;flex-direction:column;gap:2px}
+.addr{margin-top:var(--s3);color:#DDEFE3;font-size:15px}
+.addr .pending{background:#fff}
+
+footer{background:#083822;color:#BFE3CC;padding:var(--s3) 0;font-size:14px}
+
+/* sticky mobile bar */
+.sticky{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px;background:#fff;border-top:1px solid #CFE5D7;z-index:10}
+.sticky .btn{min-height:52px;font-size:16px;padding:0 8px}
+@media(min-width:800px){.sticky{display:none}}
+</style>
+</head>
+<body>
+
+<div class="ribbon">DESIGN MOCKUP – yellow <span class="pending">[PENDING]</span> tags = information still to come from Sharma Academy. Colours temporary until logo is ready.</div>
+
+<header>
+  <div class="wrap bar">
+    <div class="brand"><div class="logo">LOGO<br>PENDING</div>Sharma Academy</div>
+    <nav>
+      <a class="on" href="#">Home</a>
+      <a href="#">Batches</a>
+      <a href="#">Results</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="lang"><b>EN</b> | <span class="te">తెలుగు</span></div>
+  </div>
+</header>
+
+<!-- 1. RESULTS -->
+<section class="results">
+  <div class="wrap">
+    <span class="tag">15 years in Dilsukhnagar</span>
+    <h2>EAMCET rank under 2,000 – from our classrooms</h2>
+    <p class="sub te">దిల్‌సుఖ్‌నగర్‌లో 15 ఏళ్లుగా – EAMCET 2,000 లోపు ర్యాంకులు</p>
+    <div class="hero-cta">
+      <a class="btn btn-white" href="#">Call now <small class="te">ఇప్పుడే కాల్ చేయండి</small></a>
+      <a class="btn btn-wa" href="#">WhatsApp us <small class="te">వాట్సాప్ చేయండి</small></a>
+    </div>
+
+    <div class="grid3">
+      <article class="rcard">
+        <div class="photo">Student photo <span class="pending" style="margin-left:8px">[PENDING]</span></div>
+        <div class="rbody">
+          <div class="rank"><small>EAMCET Rank</small><br><span class="pending">[PENDING]</span></div>
+          <h3>Student name <span class="pending">[PENDING]</span></h3>
+          <p>Year <span class="pending">[PENDING]</span> · Inter MPC / EAMCET batch</p>
+        </div>
+      </article>
+      <article class="rcard">
+        <div class="photo">Student photo <span class="pending" style="margin-left:8px">[PENDING]</span></div>
+        <div class="rbody">
+          <div class="rank"><small>EAMCET Rank</small><br><span class="pending">[PENDING]</span></div>
+          <h3>Student name <span class="pending">[PENDING]</span></h3>
+          <p>Year <span class="pending">[PENDING]</span> · Inter MPC / EAMCET batch</p>
+        </div>
+      </article>
+      <article class="rcard">
+        <div class="photo">Student photo <span class="pending" style="margin-left:8px">[PENDING]</span></div>
+        <div class="rbody">
+          <div class="rank"><small>EAMCET Rank</small><br><span class="pending">[PENDING]</span></div>
+          <h3>Student name <span class="pending">[PENDING]</span></h3>
+          <p>Year <span class="pending">[PENDING]</span> · Inter MPC / EAMCET batch</p>
+        </div>
+      </article>
+    </div>
+    <p class="more"><a href="#">See all results → <span class="te">అన్ని ఫలితాలు</span></a></p>
+  </div>
+</section>
+
+<!-- 2. BATCHES -->
+<section class="batches">
+  <div class="wrap">
+    <h2>Pick your child's class – see the batch timing</h2>
+    <p class="sub te">తరగతుల వారీ బ్యాచ్‌లు, సమయాలు</p>
+
+    <div class="group">
+      <h3>Tuition · Class 8 – 10</h3>
+      <div class="grid3">
+        <article class="bcard"><div class="lvl">Tuition</div><h3>Class 8</h3>
+          <dl><dt>Timing</dt><dd><span class="pending">[PENDING]</span></dd><dt>Medium</dt><dd><span class="pending">[PENDING]</span></dd><dt>Subjects</dt><dd><span class="pending">[PENDING]</span></dd></dl>
+          <a class="btn btn-out" href="#">Call for details</a></article>
+        <article class="bcard"><div class="lvl">Tuition</div><h3>Class 9</h3>
+          <dl><dt>Timing</dt><dd><span class="pending">[PENDING]</span></dd><dt>Medium</dt><dd><span class="pending">[PENDING]</span></dd><dt>Subjects</dt><dd><span class="pending">[PENDING]</span></dd></dl>
+          <a class="btn btn-out" href="#">Call for details</a></article>
+        <article class="bcard"><div class="lvl">Tuition</div><h3>Class 10</h3>
+          <dl><dt>Timing</dt><dd><span class="pending">[PENDING]</span></dd><dt>Medium</dt><dd><span class="pending">[PENDING]</span></dd><dt>Subjects</dt><dd><span class="pending">[PENDING]</span></dd></dl>
+          <a class="btn btn-out" href="#">Call for details</a></article>
+      </div>
+    </div>
+
+    <div class="group">
+      <h3>Inter MPC &amp; EAMCET coaching</h3>
+      <div class="grid3">
+        <article class="bcard"><div class="lvl">Inter MPC</div><h3>1st Year</h3>
+          <dl><dt>Timing</dt><dd><span class="pending">[PENDING]</span></dd><dt>Medium</dt><dd><span class="pending">[PENDING]</span></dd><dt>Subjects</dt><dd>Maths, Physics, Chemistry <span class="pending">[CONFIRM]</span></dd></dl>
+          <a class="btn btn-out" href="#">Call for details</a></article>
+        <article class="bcard"><div class="lvl">Inter MPC</div><h3>2nd Year</h3>
+          <dl><dt>Timing</dt><dd><span class="pending">[PENDING]</span></dd><dt>Medium</dt><dd><span class="pending">[PENDING]</span></dd><dt>Subjects</dt><dd>Maths, Physics, Chemistry <span class="pending">[CONFIRM]</span></dd></dl>
+          <a class="btn btn-out" href="#">Call for details</a></article>
+        <article class="bcard"><div class="lvl">EAMCET</div><h3>EAMCET Coaching</h3>
+          <dl><dt>Timing</dt><dd><span class="pending">[PENDING]</span></dd><dt>Start date</dt><dd><span class="pending">[PENDING]</span></dd><dt>Batch size</dt><dd><span class="pending">[PENDING]</span></dd></dl>
+          <a class="btn btn-out" href="#">Call for details</a></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. FAQ -->
+<section class="faq">
+  <div class="wrap">
+    <h2>Questions parents ask before joining Sharma Academy</h2>
+    <p class="sub te">తల్లిదండ్రులు తరచుగా అడిగే ప్రశ్నలు</p>
+
+    <details open><summary>Can my child attend a demo class first?</summary>
+      <p><span class="pending">[PENDING – demo class policy]</span></p></details>
+    <details><summary>Are classes in Telugu or English medium?</summary>
+      <p><span class="pending">[PENDING – medium for each batch]</span></p></details>
+    <details><summary>How many students are in one batch?</summary>
+      <p><span class="pending">[PENDING – batch size]</span></p></details>
+    <details><summary>When do new batches start?</summary>
+      <p><span class="pending">[PENDING – admission / batch start dates]</span></p></details>
+    <details><summary>Where is Sharma Academy in Dilsukhnagar?</summary>
+      <p><span class="pending">[PENDING – full address + map]</span></p></details>
+    <details><summary>Can I talk to a teacher before deciding?</summary>
+      <p>Call or WhatsApp us on <span class="pending">[PENDING – phone]</span>.</p></details>
+  </div>
+</section>
+
+<!-- 4. CALL + WHATSAPP -->
+<section class="cta">
+  <div class="wrap">
+    <h2>Talk to Sharma Academy about your child's batch</h2>
+    <p class="sub te">మీ పిల్లల బ్యాచ్ గురించి ఇప్పుడే మాట్లాడండి</p>
+    <div class="big">
+      <a class="btn btn-white" href="#">Call sharma sir now <small class="te">ఇప్పుడే కాల్ చేయండి · <span class="pending">[PENDING number]</span></small></a>
+      <a class="btn btn-wa" href="#">WhatsApp us <small class="te">వాట్సాప్ చేయండి · <span class="pending">[PENDING number]</span></small></a>
+    </div>
+    <p class="addr">Sharma Academy, Dilsukhnagar, Hyderabad · <span class="pending">[PENDING – full address]</span></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© Sharma Academy · Dilsukhnagar, Hyderabad · Class 8–10 · Inter MPC · EAMCET</div>
+</footer>
+
+<div class="sticky">
+  <a class="btn btn-call" href="#">Call</a>
+  <a class="btn btn-wa" href="#">WhatsApp</a>
+</div>
+
+</body>
+</html>
