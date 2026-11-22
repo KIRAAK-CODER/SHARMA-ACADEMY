@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+/* Colours from design.md – TEMPORARY until the logo arrives ([PENDING]) */
+@theme {
+  --color-main: #0b4a2e;
+  --color-accent: #1f9d55;
+  --color-tint: #e8f4ec;
+  --color-ink: #14231b;
+  --color-muted: #51615a;
+  --color-whatsapp: #25d366;
+
+  --font-sans: var(--font-poppins), var(--font-telugu), system-ui, sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-ink);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+/* Telugu needs more line height (design.md) */
+:lang(te) {
+  line-height: 1.7;
+}
