@@ -23,7 +23,7 @@ test("desktop nav links go to the right pages", async ({ page }) => {
   await page.goto("/");
   for (const p of pages.slice(1)) {
     await page.getByRole("navigation", { name: "Main", exact: true }).getByRole("link", { name: p.h1 }).click();
-    await expect(page).toHaveURL(p.path);
+    await expect(page).toHaveURL(new RegExp(`${p.path}/?$`)); // trailingSlash adds a final /
   }
 });
 
