@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <header className="border-b border-tint bg-white">
       <div className="mx-auto flex min-h-16 max-w-[1100px] items-center justify-between gap-4 px-4">
-        <Link href="/" className="flex items-center gap-2.5 text-xl font-bold text-main">
+        <Link href="/" className="flex items-center gap-2 whitespace-nowrap text-lg font-bold text-main sm:gap-2.5 sm:text-xl">
           {/* TEMPORARY – logo is [PENDING] */}
           <span
             aria-hidden="true"
@@ -33,8 +33,8 @@ export default function Header() {
         </nav>
 
         {/* Phone number is [PENDING] – no tel: link until client gives it */}
-        <span className="inline-flex min-h-11 items-center rounded-lg bg-main px-4 text-sm font-bold text-white">
-          Call for details
+        <span className="inline-flex min-h-11 items-center whitespace-nowrap rounded-lg bg-main px-4 text-sm font-bold text-white">
+          Call<span className="hidden sm:inline">&nbsp;for details</span>
         </span>
       </div>
 

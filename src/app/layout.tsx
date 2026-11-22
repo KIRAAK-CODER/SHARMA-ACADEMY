@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${poppins.variable} ${telugu.variable} h-full`}>
-      <body className="min-h-full flex flex-col font-sans">
+      <body className="group min-h-full flex flex-col font-sans">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
